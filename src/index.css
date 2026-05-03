@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-bg: #0A0D0A;
+  --color-brand-accent: #8AB67C;
+  --color-brand-text: #E0E7E0;
+  --color-brand-muted: #A3AFA3;
+  --color-brand-border: #1F261F;
+  --color-brand-panel: #0E120E;
+
+  @keyframes shimmer {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+
+  @keyframes scanline {
+    0% { transform: translateY(-100%); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: translateY(100%); opacity: 0; }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.05); }
+  }
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-text);
+  cursor: crosshair;
+  background-image: 
+    linear-gradient(rgba(138, 182, 124, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(138, 182, 124, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.technical-overlay {
+  background: 
+    radial-gradient(circle at 2px 2px, rgba(138, 182, 124, 0.05) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.glass-card {
+  background: rgba(22, 27, 22, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(138, 182, 124, 0.1);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.scan-line {
+  background: linear-gradient(to bottom, 
+    transparent, 
+    rgba(138, 182, 124, 0.2) 50%, 
+    transparent);
+}
+
+.markdown-body ul, .markdown-body ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+}
+
+.markdown-body ol {
+  list-style-type: decimal;
+}
+
+.markdown-body li {
+  margin-top: 0.25rem;
+}
+
+.markdown-body p {
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body strong {
+  color: var(--color-brand-accent);
+}

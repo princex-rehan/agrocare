@@ -1,0 +1,6 @@
+{
+  "name": "AgroCare by TECH TITANS",
+  "description": "Professional crop diagnostic and treatment system powered by TECH TITANS.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}
